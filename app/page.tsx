@@ -53,26 +53,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-purple-400">About</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-slate-800/50 p-8 rounded-lg border border-purple-500/20">
-              <h3 className="text-2xl font-semibold mb-4 text-purple-300">Education</h3>
-              <p className="text-gray-300 mb-2">名古屋工業大学 情報学部</p>
-              <p className="text-gray-400">2023年12月 - 2024年1月</p>
-            </div>
-            <div className="bg-slate-800/50 p-8 rounded-lg border border-purple-500/20">
-              <h3 className="text-2xl font-semibold mb-4 text-purple-300">Certifications</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• 情報安全確保支援士 合格</li>
-                <li>• TOEIC 820点</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -131,23 +111,9 @@ export default function Home() {
               },
               {
                 name: "echo",
-                description: "Rustで実装されたechoサーバー",
+                description: "承認欲求0を目指した匿名アプリ",
                 tech: "Rust",
                 link: "https://github.com/uzak0209/echo",
-                isInternal: false
-              },
-              {
-                name: "engarde_client",
-                description: "Rustクライアントアプリケーション",
-                tech: "Rust",
-                link: "https://github.com/uzak0209/engarde_client",
-                isInternal: false
-              },
-              {
-                name: "CHAP_Grpc",
-                description: "TypeScriptを使用したgRPCプロジェクト",
-                tech: "TypeScript",
-                link: "https://github.com/uzak0209/CHAP_Grpc",
                 isInternal: false
               },
             ].map((project) => {

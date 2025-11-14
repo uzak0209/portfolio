@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,52 +21,140 @@ export default function ChapProject() {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section with Image */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 text-transparent bg-clip-text">
               CHAP
             </h1>
             <p className="text-2xl md:text-3xl text-cyan-300 mb-8">
               位置情報ベースのクローズドSNS
             </p>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
               もっとローカルな話をSNSで共有しませんか？
               <br />
               あなたの周りで起きている「ホットな話題」「素敵な場所」「災害情報」「集合場所」を共有できます。
             </p>
           </div>
 
+          {/* Hero Image */}
+          <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl border border-cyan-500/30">
+            <Image
+              src="/images/projects/chap/slide-01.png"
+              alt="CHAP アプリケーション - スマートフォンとデスクトップ"
+              width={1920}
+              height={1080}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+
           {/* Quick Links */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
+          <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://play.google.com/store/apps/details?id=com.back2525.chap"
+              href="https://chap-app.jp"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition font-semibold flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
               </svg>
-              Google Play
+              Webアプリを開く
+            </a>
+            <a
+              href="https://github.com/uzak0209/CHAP_Grpc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition font-semibold border border-cyan-500/50 flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              GitHub (gRPC)
             </a>
             <a
               href="https://github.com/uzak0209/CHAP_android"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition font-semibold border border-cyan-500/50"
+              className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition font-semibold border border-cyan-500/50 flex items-center gap-2"
             >
-              GitHub
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              GitHub (Android)
             </a>
           </div>
         </div>
       </section>
 
-      {/* Key Features */}
+      {/* Concept Section with Image */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold mb-6 text-cyan-400">もっとローカルな話をSNSで</h2>
+              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+                CHAPは、あなたの周りで起きていることを共有できる、位置情報ベースのクローズドSNSです。
+              </p>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">🔥</span>
+                  <div>
+                    <strong className="text-cyan-300">ホットな話題</strong>
+                    <p className="text-sm text-gray-400">近所で話題になっていることをキャッチ</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">🌟</span>
+                  <div>
+                    <strong className="text-cyan-300">素敵な場所</strong>
+                    <p className="text-sm text-gray-400">地域の隠れた名所を発見・共有</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">🚨</span>
+                  <div>
+                    <strong className="text-cyan-300">災害情報</strong>
+                    <p className="text-sm text-gray-400">緊急時の情報共有と安否確認</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">📍</span>
+                  <div>
+                    <strong className="text-cyan-300">集合場所</strong>
+                    <p className="text-sm text-gray-400">友達との待ち合わせ場所を簡単に共有</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-cyan-500/30">
+              <Image
+                src="/images/projects/chap/slide-03.png"
+                alt="CHAP マップインターフェース"
+                width={1920}
+                height={1080}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section with Screenshots */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-cyan-400">主な機能</h2>
+          <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl border border-cyan-500/30">
+            <Image
+              src="/images/projects/chap/slide-04.png"
+              alt="CHAP 主な機能 - POST, THREAD, EVENT, SPOT"
+              width={1920}
+              height={1080}
+              className="w-full h-auto"
+            />
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-lg border border-cyan-500/20 hover:border-cyan-500/50 transition">
               <div className="text-4xl mb-4">📝</div>
@@ -100,7 +189,7 @@ export default function ChapProject() {
       </section>
 
       {/* Privacy & Security */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-cyan-400">プライバシー保護</h2>
           <div className="bg-slate-800/50 p-8 rounded-lg border border-cyan-500/20">
@@ -121,125 +210,74 @@ export default function ChapProject() {
         </div>
       </section>
 
-      {/* Comparison with Other Apps */}
+      {/* Desktop View Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-center text-cyan-400">デスクトップでも利用可能</h2>
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-cyan-500/30">
+            <Image
+              src="/images/projects/chap/slide-10.png"
+              alt="CHAP デスクトップビュー"
+              width={1920}
+              height={1080}
+              className="w-full h-auto"
+            />
+          </div>
+          <p className="text-center text-gray-300 mt-8">
+            スマートフォンだけでなく、PCのWebブラウザからもアクセス可能。
+            大画面で地図を確認しながら、快適に投稿・閲覧できます。
+          </p>
+        </div>
+      </section>
+
+      {/* Advanced Features - Heat Map */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-cyan-400">他の地図SNSとの違い</h2>
-          <div className="bg-slate-800/50 p-8 rounded-lg border border-cyan-500/20">
-            <div className="text-center mb-8">
-              <p className="text-2xl font-semibold text-cyan-300 mb-4">
-                地図SNSなのに安全で地点登録もできちゃうアプリ
+          <h2 className="text-4xl font-bold mb-12 text-center text-cyan-400">先進的な機能：ヒートマップ</h2>
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-cyan-500/30">
+              <Image
+                src="/images/projects/chap/slide-11.png"
+                alt="CHAP ヒートマップ - 地域のトレンド可視化"
+                width={1920}
+                height={1080}
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <h3 className="text-2xl font-semibold mb-4 text-cyan-300">クラスタリングによるトレンド分析</h3>
+              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                投稿データを自然言語処理（NLP）でトークナイズし、ベクトル化。
+                クラスタリング技術により、地域で話題のテーマを自動的に抽出します。
               </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-4 text-purple-300">✨ CHAPの強み</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-2">
-                    <span className="text-cyan-400 font-bold">•</span>
-                    <span><strong>リアルタイム性</strong>: 今、その場所で起きていることを共有</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-cyan-400 font-bold">•</span>
-                    <span><strong>匿名性</strong>: プライバシーを守りながら投稿</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-cyan-400 font-bold">•</span>
-                    <span><strong>地点登録</strong>: お気に入りスポットを保存</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-cyan-400 font-bold">•</span>
-                    <span><strong>位置情報共有</strong>: イベントや集合場所の共有</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-4 text-purple-300">🎯 ユースケース</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-2">
-                    <span className="text-yellow-400">🔥</span>
-                    <span>近所のホットな話題をキャッチ</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-400">🚨</span>
-                    <span>災害時の情報共有と安否確認</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-400">🌟</span>
-                    <span>地域の隠れた名所を発見</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400">📍</span>
-                    <span>友達との待ち合わせ場所を共有</span>
-                  </li>
-                </ul>
+              <div className="bg-slate-900/50 p-6 rounded-lg border border-purple-500/20">
+                <h4 className="text-lg font-semibold mb-3 text-purple-300">処理フロー</h4>
+                <ol className="space-y-2 text-gray-300 text-sm">
+                  <li>1. 投稿された全ての文章をトークナイズ化</li>
+                  <li>2. 単語をベクトル化</li>
+                  <li>3. ベクトル化した単語をクラスタリング</li>
+                  <li>4. Gemini AIが最も要素数が多かったクラスタの共通の話題を抽出</li>
+                  <li>5. ヒートマップに表示し、地域のトレンドを可視化</li>
+                </ol>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Advanced Features */}
+      {/* Architecture */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-cyan-400">先進的な機能</h2>
-          <div className="bg-gradient-to-br from-slate-800/80 to-purple-900/30 p-8 rounded-lg border border-cyan-500/20">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="text-4xl">🗺️</div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-cyan-300">クラスタリングによるヒートマップ</h3>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  投稿データを自然言語処理（NLP）でトークナイズし、ベクトル化。
-                  クラスタリング技術により、地域で話題のテーマを自動的に抽出します。
-                </p>
-                <div className="bg-slate-900/50 p-6 rounded-lg border border-purple-500/20">
-                  <h4 className="text-lg font-semibold mb-3 text-purple-300">処理フロー</h4>
-                  <ol className="space-y-2 text-gray-300">
-                    <li>1. 投稿された全ての文章をトークナイズ化</li>
-                    <li>2. 単語をベクトル化</li>
-                    <li>3. ベクトル化した単語をクラスタリング</li>
-                    <li>4. Gemini AIが最も要素数が多かったクラスタの共通の話題を抽出</li>
-                    <li>5. ヒートマップに表示し、地域のトレンドを可視化</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
+          <h2 className="text-4xl font-bold mb-12 text-center text-cyan-400">システムアーキテクチャ</h2>
+          <div className="mb-8 rounded-2xl overflow-hidden shadow-2xl border border-cyan-500/30 bg-white p-4">
+            <Image
+              src="/images/projects/chap/slide-15.png"
+              alt="CHAP システムアーキテクチャ図"
+              width={1920}
+              height={1080}
+              className="w-full h-auto"
+            />
           </div>
-        </div>
-      </section>
-
-      {/* Additional Features */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-cyan-400">その他の機能</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: "📜", title: "履歴画面", description: "過去の自分の投稿を確認" },
-              { icon: "⏰", title: "タイムライン画面", description: "みんなの投稿を確認" },
-              { icon: "🎯", title: "現在地復帰", description: "すぐに現在地に戻る機能" },
-              { icon: "🎨", title: "アイコン自動割り当て", description: "ユーザーアイコンを自動生成" },
-              { icon: "🔐", title: "ログイン機能", description: "安全な認証システム" },
-              { icon: "📍", title: "地点登録", description: "お気に入りの場所を保存" },
-              { icon: "🏷️", title: "カテゴリフィルター", description: "3つのカテゴリで投稿をフィルタリング" },
-              { icon: "🔍", title: "ズーム連動表示", description: "マップのズームに応じてマーカーを表示・非表示" },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-slate-800/50 p-6 rounded-lg border border-cyan-500/20 hover:border-cyan-500/50 transition"
-              >
-                <div className="text-3xl mb-3">{feature.icon}</div>
-                <h3 className="text-lg font-semibold mb-2 text-cyan-300">{feature.title}</h3>
-                <p className="text-gray-400 text-sm">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Stack */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-cyan-400">技術スタック</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-lg border border-cyan-500/20">
               <h3 className="text-xl font-semibold mb-4 text-cyan-300">Mobile</h3>
@@ -264,7 +302,7 @@ export default function ChapProject() {
                 <p>• Go</p>
                 <p>• gRPC</p>
                 <p>• Protocol Buffers</p>
-                <p>• Firebase</p>
+                <p>• PostgreSQL</p>
               </div>
             </div>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-cyan-500/20">
@@ -273,7 +311,9 @@ export default function ChapProject() {
                 <p>• AWS Lambda</p>
                 <p>• AWS RDS</p>
                 <p>• AWS S3</p>
-                <p>• AWS ECR</p>
+                <p>• AWS EC2</p>
+                <p>• Cloudflare Proxy</p>
+                <p>• Cloudflare R2</p>
               </div>
             </div>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-cyan-500/20">
@@ -291,6 +331,7 @@ export default function ChapProject() {
                 <p>• GitHub Actions (CI/CD)</p>
                 <p>• Swagger (自動生成)</p>
                 <p>• Orval</p>
+                <p>• Air</p>
               </div>
             </div>
           </div>
@@ -298,7 +339,7 @@ export default function ChapProject() {
       </section>
 
       {/* Development Focus */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-cyan-400">開発体験へのこだわり</h2>
           <div className="space-y-6">
@@ -328,7 +369,7 @@ export default function ChapProject() {
       </section>
 
       {/* User Feedback */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-cyan-400">継続的な改善</h2>
           <div className="bg-slate-800/50 p-8 rounded-lg border border-cyan-500/20">
@@ -359,26 +400,36 @@ export default function ChapProject() {
         </div>
       </section>
 
-      {/* Links */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8 text-cyan-400">今すぐ試してみる</h2>
-          <p className="text-gray-300 mb-8 text-lg">
-            CHAPは現在Google Playで公開中です。ぜひダウンロードして、
-            <br />
+          <p className="text-gray-300 mb-8 text-lg max-w-3xl mx-auto">
+            Webアプリケーションとして公開中です。ぜひアクセスして、
             あなたの地域のローカルな情報を共有してみてください。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://play.google.com/store/apps/details?id=com.back2525.chap"
+              href="https://chap-app.jp"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition font-semibold flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
               </svg>
-              Google Playでダウンロード
+              Webアプリを開く
+            </a>
+            <a
+              href="https://github.com/uzak0209/CHAP_Grpc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition font-semibold border border-cyan-500/50 flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              GitHub (gRPC)
             </a>
             <a
               href="https://github.com/uzak0209/CHAP_android"
@@ -389,7 +440,7 @@ export default function ChapProject() {
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
-              GitHub でコードを見る
+              GitHub (Android)
             </a>
           </div>
         </div>
